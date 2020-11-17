@@ -18,6 +18,18 @@ agent any
                       sh 'echo building code' 
                      }
               }
+          
+           stage('get approval')
+                    {
+                      input 'please approve the deployment' 
+                     }
+              
+          
+           stage('deployment'){
+                steps{
+                      sh 'echo code is deploying' 
+                     }
+              }
               
            }
 
