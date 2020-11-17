@@ -19,11 +19,11 @@ agent any
                      }
               }
           
-           stage('get approval')
-                    {
+          stage('get approval'){
+                steps{
                       input 'please approve the deployment' 
                      }
-              
+          }
           
            stage('deployment'){
                 steps{
